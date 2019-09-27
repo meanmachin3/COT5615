@@ -1,0 +1,41 @@
+\section{Vectors}
+\subsection*{Vectors}
+An ordered finite list of numbers.\\
+Block or stacked vectors($a = [b, c, d]$), Subvectors ($a_{r:s} = (a_r,...,a_s)$), Zero vectors (all elements equal to zero), Unit vectors(($e_i = 1$)), Ones vector($1_n$) \& Sparsity($nnz(x)$)
+
+\subsection*{Vector addition}
+\textit{Commutative}: $a + b = b + a$\\
+\textit{Associative}: $(a + b) + c = a + (b + c)$\\
+$a+0 = 0+a = a$\\
+$a - a = 0$
+
+\subsection{Scalar-vector multiplication}
+$(-2)[1, 9, 6]^T = [-2, -18, -12]^T$\\
+\textit{Commutative}: $\alpha a = a \alpha$\\
+\textit{Left-distributive }: $(\beta + \gamma)a = \beta a + \gamma a$\\
+\textit{Right-distributive }: $a(\beta + \gamma) = a\beta + a\gamma $ \\
+
+Linear combinations: $\beta_1 a_1 + ... + \beta_m a_m$\\
+$\cdot$ With Unit vectors: $b = b_1 e_1 +...+ b_n e_n$ \\
+$\cdot$ If $\beta_1 +...+ \beta_m = 1$, linear combination is said to be \textit{affine combination}
+
+\subsection{Inner product}
+$a^T b = a_1 b_1 +a_2 b_2 +...+ a_n b_n$
+\textbf{Properties}:\\
+$\cdot$ \textit{Commutativity}:$a^T b = b^T a$\\
+$\cdot$ \textit{Associativity with scalar multiplication}:$(\gamma a)^T b = \gamma(a^T b)$\\
+$\cdot$ {Distributivity with vector addition}: $(a + b)^T c = a^T c + b^T c.$
+
+\textbf{General examples}:\\
+$\cdot$ Unit vector: $e_i^T a = a_i$ \\
+$\cdot$ Sum: $\textbf{1}^T a = a^1 + ... + a^n$ \\
+$\cdot$ Average: $(\textbf{1}/n)^T a=(a^1+...+a^n)/n$\\ 
+$\cdot$ Sum of squares: $a^Ta = a^2_1 +...+a^2_n$\\
+$\cdot$ Selective sum: If $b_i = 1 or 0,$ \textit{$b^Ta$} is the sum of elements for which $b_i = 1$,
+
+\textbf{Block vectors}\\
+$a^T b = a_1^T b_1 + ... + a_k^T b_k$
+
+\subsection{Complexity of vector computations}
+\textit{Space}:  8n bytes\\
+\textit{Complexity of vector operations}: $x^Ty=2n-1$ flops ($n$ scalar multiplications and $n-1$ scalar additions)
