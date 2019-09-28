@@ -1,10 +1,31 @@
 \section{Norm and distance}
 \subsection{Norm} 
-
+\textit{Euclidean norm} (or just norm) is\\
+$||x||= \sqrt{x_1^2+x_2^2+...+x_n^2}= \sqrt{x^Tx}$\\
+\textbf{Properties}\\
+$\cdot$ homogeneity: $||\beta x|| = |\beta ||x|||$\\
+$\cdot$ triangle inequality: $||x + y|| \leq ||x|| + ||y||$\\
+$\cdot$ non negativity: $||x|| \geq 0$\\
+$\cdot$ definiteness: $||x|| = 0$ only if x = 0\\
+\textit{positive definiteness} = non negativity + definiteness\\
+\textbf{rms}(x) = $\sqrt{\frac{x_1^2+...+x_n^2}{n}} = \frac{||x||}{\sqrt{n}}$ \\
+\textbf{Norm of block vectors}
+$||(a,b,c)|| = \sqrt{||a||^2 + ||b||^2 + ||c||^2} = ||(||a||, ||b||, ||c||)||$\\
+\textbf{Chebyshev inequality}
+% Todo 
 \subsection{Distance}
+$\textbf{dist}(a,b) = ||a - b||$\\
+\textit{Triangle Inequality}: $||a - c|| = ||(a - b) + (b - c)|| \leq ||a-b|| + ||b-c||$\\
+$z_j$ is the nearest neighbor of x if $||x-z_j|| \leq ||x-z_i||, i=1,..,m$\\
 
 \subsection{Standard Deviation}
+de-meaned vector: $\tilde{x} = x - \textbf{avg}(x)\textbf{1}$\\
+standard deviation: \textbf{std}(x) = \textbf{rms}($\tilde{x}$) = $\frac{||x - (\textbf{1}^Tx/n)\textbf{1}||}{\sqrt{n}}$\\
+${\textbf{rms}(x)}^2 = {\textbf{avg}(x)}^2 + {\textbf{std}(x)}^2$\\
+By Chebyshev inequality, $|x_i - \textbf{avg}(x)| \geq \alpha \textbf{std}(x)$ is no more than $1/\alpha^2$ (for 
+$\alpha$ > 1)
 
 \subsection{Angle}
+\textit{Cauchy–Schwarz inequality}: $|a^Tb| \leq ||a||||b||$
 
 \subsection{Complexity}
