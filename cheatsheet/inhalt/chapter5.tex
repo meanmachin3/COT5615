@@ -1,5 +1,39 @@
 \section{Linear Independence}
+$(a_1,...,a_k)$ is linearly dependent if\\
+$\beta_1 a_1+...+\beta_k a_k = 0$, some $\beta_1,,...\beta_k$ ,that are not all zero
 \subsection{Linear Independence}
+$(a_1,...,a_k)$ is linearly independent if\\
+$\beta_1 a_1+...+\beta_k a_k = 0$ \& $\beta_1 =...= \beta_k =0$
 \subsection{Basis}
+\textit{basis}: A collection of n linearly independent n-vectors
+\textbf{Independence-dimension inequality}
+\textit{a linearly independent set of n-vectors can have at most n elements}\\
+\textit{any set of n + 1 or more n-vectors is linearly dependent}
+
 \subsection{Orthonomal Vectors}
-\subsection{Gram–Schmidt algorithm}
+$a_1,...,a_k$ are (mutually) \textit{orthogonal} if $a_i \perp a_j$ for i != j\\
+They are \textit{normalized} if $\Vert a_i\Vert = 1$ for i=1,..,k\\
+\textbullet \textit{orthonormal} if \textit{orthogonal} \& \textit{normalized}\\
+\textbullet can be expressed using inner products\\
+$
+a_i^Ta_j = \left\{
+  \begin{array}{@{}ll@{}}
+    1, & \text{if}\ i=j \\
+    0, & i \neq j
+  \end{array}\right.
+$\\
+\textbullet orthonormal sets of vectors are linearly independent\\
+\textbullet $a_1,. . . ,a_n$ is an orthonormal basis, we have for any n-vector $x = ( a^T_1 x ) a_1 +...+ ( a^T_n x ) a_n$
+\subsection{Gram–Schmidt(orthogonalization)}
+An algorithm to check if $a_1,...,a_k$ are linearly independent\\
+\rule{\linewidth}{0.4pt}
+\textbf{given} n-vectors $a_1,...a_n$\\
+\textbf{for} i = 1,..,k\\
+1.Orthogonalization: \\$\tilde{q}_i = a_i - (q^T_1 a_i)q_1 - ... - (q^T_{i-1}a_i)q_{i-1}$\\
+2. Test for linear dependence: \\if $\tilde{q} = 0$, quit\\
+3.Normalization: $q_i = \tilde{q}_i/\Vert \tilde{q}_i\Vert$\\
+\rule{\linewidth}{0.4pt}
+
+\textbullet if G–S does not stop early (in step 2), $a_1 , . . . , a_k$ are linearly independent\\
+\textbullet if G–S stops early in iteration $i = j$, then $a_j$ is a linear combination of $a_1,..,a_{j-1}$ (so $a_1,..,a_k$ are linearly dependent)\\
+\textbf{Complexity}: $2nk^2$

@@ -3,16 +3,17 @@
 \textit{Euclidean norm} (or just norm) is\\
 $||x||= \sqrt{x_1^2+x_2^2+...+x_n^2}= \sqrt{x^Tx}$\\
 \textbf{Properties}\\
-$\cdot$ homogeneity: $||\beta x|| = |\beta ||x|||$\\
-$\cdot$ triangle inequality: $||x + y|| \leq ||x|| + ||y||$\\
-$\cdot$ non negativity: $||x|| \geq 0$\\
-$\cdot$ definiteness: $||x|| = 0$ only if x = 0\\
+\textbullet homogeneity: $||\beta x|| = |\beta ||x|||$\\
+\textbullet triangle inequality: $||x + y|| \leq ||x|| + ||y||$\\
+\textbullet non negativity: $||x|| \geq 0$\\
+\textbullet definiteness: $||x|| = 0$ only if x = 0\\
 \textit{positive definiteness} = non negativity + definiteness\\
 \textbf{rms}(x) = $\sqrt{\frac{x_1^2+...+x_n^2}{n}} = \frac{||x||}{\sqrt{n}}$ \\
 \textbf{Norm of block vectors}
 $||(a,b,c)|| = \sqrt{||a||^2 + ||b||^2 + ||c||^2} = ||(||a||, ||b||, ||c||)||$\\
 \textbf{Chebyshev inequality}
 % Todo 
+Todo
 \subsection{Distance}
 $\textbf{dist}(a,b) = ||a - b||$\\
 \textit{Triangle Inequality}: $||a - c|| = ||(a - b) + (b - c)|| \leq ||a-b|| + ||b-c||$\\
@@ -24,8 +25,22 @@ standard deviation: \textbf{std}(x) = \textbf{rms}($\tilde{x}$) = $\frac{||x - (
 ${\textbf{rms}(x)}^2 = {\textbf{avg}(x)}^2 + {\textbf{std}(x)}^2$\\
 By Chebyshev inequality, $|x_i - \textbf{avg}(x)| \geq \alpha \textbf{std}(x)$ is no more than $1/\alpha^2$ (for 
 $\alpha$ > 1)
-
+\textit{Cauchy–Schwarz inequality}: $|a^Tb| \leq \Vert a\Vert \Vert b \Vert$
 \subsection{Angle}
-\textit{Cauchy–Schwarz inequality}: $|a^Tb| \leq ||a||||b||$
+angle between two nonzero vectors a, b defined as\\
+$\angle(a,b) = arccos(\frac{a^Tb}{\Vert a \Vert \Vert b \Vert})$\\
+$a^Tb = \Vert a \Vert \Vert b \Vert cos (\angle(a,b))$\\
+\textbf{Classification of angles}\\
 
+$\theta = \pi/2$: $a \perp b$\\
+$\theta = 0$: $a^Tb = \Vert a \Vert \Vert b \Vert$\\
+$\theta = \pi = 180^{\circ}$ : $a^Tb = -\Vert a \Vert \Vert b\Vert$\\
+$\theta \leq \pi/2 = 90^{\circ} = a^Tb \geq 0$\\
+$\theta \geq \pi/2 = 90^{\circ} = a^Tb \leq 0$\\
+\textbf{Correlation Coeficient}
+$\rho = \frac{\tilde{a}^T\tilde{b}}{\Vert\tilde{a}\Vert\Vert\tilde{b}\Vert}$\\
+With $u = \tilde{a}/\textbf{std}(a)$ \& $u = \tilde{b}/\textbf{std}(b)$, \\
+$\rho = u^Tv/n$ where $\Vert u \Vert = \Vert v \Vert = n$
 \subsection{Complexity}
+% Todo
+Todo
