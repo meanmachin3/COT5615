@@ -19,3 +19,5 @@ From [3B1B]:
 
 [![Backpropagation calculus | Deep learning, chapter 4](https://img.youtube.com/vi/Ilg3gGewQ5U/0.jpg)](https://www.youtube.com/watch?v=tIeHLnjs5U8)
 
+### Install Julia
+[![Install Julia](https://img.youtube.com/vi/oyx8M1yoboY/0.jpg)](https://www.youtube.com/watch?v=oyx8M1yoboY)
