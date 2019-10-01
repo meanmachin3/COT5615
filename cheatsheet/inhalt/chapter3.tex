@@ -9,14 +9,15 @@ $||x||= \sqrt{x_1^2+x_2^2+...+x_n^2}= \sqrt{x^Tx}$\\
 \textbullet definiteness: $||x|| = 0$ only if x = 0\\
 \textit{positive definiteness} = non negativity + definiteness\\
 \textbf{rms}(x) = $\sqrt{\frac{x_1^2+...+x_n^2}{n}} = \frac{||x||}{\sqrt{n}}$ \\
+\textbullet \textit{Norm of a sum}:\\ 
+$\Vert a + b \Vert^2 = (x + y)^T(x + y) = \Vert x \Vert^2 + 2x^Ty + \Vert b \Vert^2$\\
 \textbf{Norm of block vectors}
 $||(a,b,c)|| = \sqrt{||a||^2 + ||b||^2 + ||c||^2} = ||(||a||, ||b||, ||c||)||$\\
 \textbf{Chebyshev inequality}
-% Todo 
-Todo
+k of its entries satisfy $|x_i| \geq a$, then $\frac{k}{n} \leq (\frac{\textbf{rms}(x)}{a})^2$
 \subsection{Distance}
 $\textbf{dist}(a,b) = ||a - b||$\\
-\textit{Triangle Inequality}: $||a - c|| = ||(a - b) + (b - c)|| \leq ||a-b|| + ||b-c||$\\
+\textit{Triangle Inequality}: $||a - c||^2 = ||(a - b) + (b - c)|| \leq ||a-b|| + ||b-c||$\\
 $z_j$ is the nearest neighbor of x if $||x-z_j|| \leq ||x-z_i||, i=1,..,m$\\
 
 \subsection{Standard Deviation}
@@ -42,5 +43,7 @@ $\rho = \frac{\tilde{a}^T\tilde{b}}{\Vert\tilde{a}\Vert\Vert\tilde{b}\Vert}$\\
 With $u = \tilde{a}/\textbf{std}(a)$ \& $u = \tilde{b}/\textbf{std}(b)$, \\
 $\rho = u^Tv/n$ where $\Vert u \Vert = \Vert v \Vert = n$
 \subsection{Complexity}
-% Todo
-Todo
+\textbullet \textit{norm}: 2n\\
+\textbullet \textit{\textbf{rms}}: 2n\\
+\textbullet \textit{\textbf{dist}(a,b)}: 3n\\
+\textbullet \textit{$\angle(a,b)$}: 6n\\

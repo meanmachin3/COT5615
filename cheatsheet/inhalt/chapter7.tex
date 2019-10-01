@@ -3,22 +3,31 @@
 \textbullet \textit{Scaling}: $y = Ax$ with $A = aI$ stretches a vector by the factor $|a|$ (or shrinks it when $|a| < 1$), and it flips the vector (reverses its direction) if $a < 0$\\
 \textbullet \textit{Dilation}: $y = Dx$, where D is a diagonal matrix, $D = diag(d1,d2)$. Stretches the vector x by different factors along the two different axes. (Or shrinks, if $|d_i| < 1$, and flips, if $di < 0$.)\\
 \textbullet \textit{Rotation Matrix}: 
-\[
+$
 y = 
 \begin{bmatrix}
     cos \theta & -sin \theta \\
     sin \theta & cos \theta
 \end{bmatrix}x
-\]
+$\\
 \textbullet \textit{Reflection}
-Suppose that y is the vector obtained by reflecting x through the line that passes through the origin, inclined $\theta$ radians with respect to horizontal.
-\[
+Suppose that y is the vector obtained by reflecting x through the line that passes through the origin, inclined $\theta$ radians with respect to horizontal.\\
+$
 y = 
 \begin{bmatrix}
     cos (2\theta) & sin(2\theta) \\
     sin (2\theta) & -cos (2\theta)
 \end{bmatrix}x
-\]
+$\\
+\textbullet \textit{Projection into a line}
+Projection of point x onto a set is the point in the set that is closest to x.\\
+$
+y = 
+\begin{bmatrix}
+    (1/2)(1 + cos (2\theta)) & (1/2)sin(2\theta) \\
+    (1/2)sin (2\theta) & (1/2)(1 - cos (2\theta))
+\end{bmatrix}x
+$
 \subsection{Selectors}
 An $m \times n$ selector matrix A is one in which each row is a unit vector (transposed):
 \[
@@ -30,7 +39,7 @@ An $m \times n$ selector matrix A is one in which each row is a unit vector (tra
 \end{bmatrix}
 \]
 When it multiplies a vector, it simply copies the $k_i$th entry of x into the $i$th entry of $y = Ax$:\\
-$y = (x_{k_1},x_{k_2},...,x_{k_m})$
+$y = (x_{k_1},x_{k_2},...,x_{k_m})$\\
 
 \subsection{Incidence matrix}
 \textbf{Directed graph}: A \textit{directed graph} consists of a set of \textit{vertices} (or nodes), labeled 1,...,n, and a set of \textit{directed edges} (or branches), labeled 1,...,m. \\
