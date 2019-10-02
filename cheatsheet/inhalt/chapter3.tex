@@ -14,7 +14,7 @@ $\Vert a + b \Vert^2 = (x + y)^T(x + y) = \Vert x \Vert^2 + 2x^Ty + \Vert b \Ver
 \textbf{Norm of block vectors}
 $||(a,b,c)|| = \sqrt{||a||^2 + ||b||^2 + ||c||^2} = ||(||a||, ||b||, ||c||)||$\\
 \textbf{Chebyshev inequality}
-k of its entries satisfy $|x_i| \geq a$, then $\frac{k}{n} \leq (\frac{\textbf{rms}(x)}{a})^2$
+k of its entries satisfy $|x_i| \geq a$, \\then $\frac{k}{n} \leq (\frac{\textbf{rms}(x)}{a})^2$
 \subsection{Distance}
 $\textbf{dist}(a,b) = ||a - b||$\\
 \textit{Triangle Inequality}: $||a - c||^2 = ||(a - b) + (b - c)|| \leq ||a-b|| + ||b-c||$\\
@@ -22,10 +22,9 @@ $z_j$ is the nearest neighbor of x if $||x-z_j|| \leq ||x-z_i||, i=1,..,m$\\
 
 \subsection{Standard Deviation}
 de-meaned vector: $\tilde{x} = x - \textbf{avg}(x)\textbf{1}$\\
-standard deviation: \textbf{std}(x) = \textbf{rms}($\tilde{x}$) = $\frac{||x - (\textbf{1}^Tx/n)\textbf{1}||}{\sqrt{n}}$\\
+standard deviation: \\\textbf{std}(x) = \textbf{rms}($\tilde{x}$) = $\frac{||x - (\textbf{1}^Tx/n)\textbf{1}||}{\sqrt{n}}$\\
 ${\textbf{rms}(x)}^2 = {\textbf{avg}(x)}^2 + {\textbf{std}(x)}^2$\\
-By Chebyshev inequality, $|x_i - \textbf{avg}(x)| \geq \alpha \textbf{std}(x)$ is no more than $1/\alpha^2$ (for 
-$\alpha$ > 1)
+By Chebyshev inequality, $|x_i - \textbf{avg}(x)| \geq \alpha \textbf{std}(x)$ then $k/n \leq (std(x)/a)^2$. (This inequality is only interesting for $a > std(x)$) \\
 \textit{Cauchy–Schwarz inequality}: $|a^Tb| \leq \Vert a\Vert \Vert b \Vert$
 \subsection{Angle}
 angle between two nonzero vectors a, b defined as\\
@@ -38,10 +37,19 @@ $\theta = 0$: $a^Tb = \Vert a \Vert \Vert b \Vert$\\
 $\theta = \pi = 180^{\circ}$ : $a^Tb = -\Vert a \Vert \Vert b\Vert$\\
 $\theta \leq \pi/2 = 90^{\circ} = a^Tb \geq 0$\\
 $\theta \geq \pi/2 = 90^{\circ} = a^Tb \leq 0$\\
-\textbf{Correlation Coeficient}
+\textbf{Correlation Coeficient ($\rho$)}
 $\rho = \frac{\tilde{a}^T\tilde{b}}{\Vert\tilde{a}\Vert\Vert\tilde{b}\Vert}$\\
 With $u = \tilde{a}/\textbf{std}(a)$ \& $u = \tilde{b}/\textbf{std}(b)$, \\
-$\rho = u^Tv/n$ where $\Vert u \Vert = \Vert v \Vert = n$
+$\rho = u^Tv/n$ where $\Vert u \Vert = \Vert v \Vert = n$\\
+
+$std(a+b) = \\
+\sqrt{std(a)^22+ 2\rho std(a)std(b) +std(b)^2}$\\
+\textbf{Properties of standard deviation}\\
+\textbullet  $\textbf{std}(x+a1) = \textbf{std}(x)$\\
+\textbullet $\textbf{std}(ax) = |a| std(x)$\\
+\textbf{Standardization}
+$z = \frac{1}{\textbf{std}(x)}(x - \textbf{avg}(x)\textbf{1})$
+
 \subsection{Complexity}
 \textbullet \textit{norm}: 2n\\
 \textbullet \textit{\textbf{rms}}: 2n\\

@@ -1,6 +1,24 @@
 \section{Linear dynamical systems}
 \subsection{Linear dynamical systems}
+$x_{t+1} = A_tx_t$ , t = 1,2,. . .\\
+\textbullet $A_t$ are n × n dynamics matrices
+\textbullet $(A_t)_{ij}(x_t)_j
+is contribution to (x_{t+1})_i
+from (x_t)_j$\\
+\textbullet system is called time-invariant if $A_t = A$ doesn't depend on time\\
+\textbullet can simulate evolution of xt using recursion $x_{t+1} = A_tx$\\
+\textbullet linear dynamical system with input\\
+$x_{t+1} = A_tx_t + B_tu_t + c_t$, t = 1,2,...\\
+\thickspace -- $u_t$ is an input m-vector\\
+\thickspace -- $B_t$ is n × m input matrix\\
+\thickspace -- $c_t$ is offset\\
+\textbf{K-Markov model}:\\
+$x_{t+1} = A_1x_t + ... + A_Kx_{t-K+1}$, t = K,K + 1,...\\
+\thickspace -- next state depends on current state and K - 1 previous states\\
+\thickspace – also known as auto-regresssive model\\
+\thickspace – for K = 1, this is the standard linear dynamical system $x_{t+1} = Ax_t$\\
 \subsection{Population dynamics}
+
 \subsection{Epidemic dynamics}
 \subsection{Motion of a mass}
 \subsection{Supply chain dynamics}

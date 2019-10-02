@@ -2,7 +2,7 @@
 \subsection{Geometric transformations}
 \textbullet \textit{Scaling}: $y = Ax$ with $A = aI$ stretches a vector by the factor $|a|$ (or shrinks it when $|a| < 1$), and it flips the vector (reverses its direction) if $a < 0$\\
 \textbullet \textit{Dilation}: $y = Dx$, where D is a diagonal matrix, $D = diag(d1,d2)$. Stretches the vector x by different factors along the two different axes. (Or shrinks, if $|d_i| < 1$, and flips, if $di < 0$.)\\
-\textbullet \textit{Rotation Matrix}: 
+\textbullet \textit{Rotation Matrix (counter clockwise)}: 
 $
 y = 
 \begin{bmatrix}
@@ -40,7 +40,9 @@ An $m \times n$ selector matrix A is one in which each row is a unit vector (tra
 \]
 When it multiplies a vector, it simply copies the $k_i$th entry of x into the $i$th entry of $y = Ax$:\\
 $y = (x_{k_1},x_{k_2},...,x_{k_m})$\\
-
+\textbf{r:s matrix slicing}\\
+$A=[0_{m\times(r-1)} I_{m\times m} 0_{m \times (n-s)}]$\\
+where $m=s-r+1$
 \subsection{Incidence matrix}
 \textbf{Directed graph}: A \textit{directed graph} consists of a set of \textit{vertices} (or nodes), labeled 1,...,n, and a set of \textit{directed edges} (or branches), labeled 1,...,m. \\
 $
@@ -52,3 +54,21 @@ A_{ij} = \left\{
   \end{array}\right.
 $\\
 \subsection{Convolution}
+The convolution of an n-vector a and an m-vector b is the (n + m - 1)-vector denoted c = a * b\\
+$c_k = \sum_{i+j=k+1} a_ib_j, k=1,..,n+m-1$\\
+\textbf{Properties of convolution}\\
+\textbullet symmetric: $a * b = b * a$\\
+\textbullet associative: $(a*b)*c = a*(b*c)$\\
+\textbullet $a*b = 0$ implies that either $a = 0$ or $b = 0$\\
+\textbullet A basic property is that for fixed a, the convolution a * b is a linear function of b; and for fixed b, it is a linear function of a, $a * b = T (b)a = T (a)b$ where where T(b) is the (n + m - 1) × n matrix with entries\\
+$
+T(b)_{ij} = \left\{
+  \begin{array}{@{}ll@{}}
+    b_{i-j+1}, & 1\leq i-j+1 \leq m\\
+    0, & \text{otherwise}
+  \end{array}\right.
+$\\
+\textbf{Complexity of convolution}\\
+\textbullet $c= a * b$: 2mn flops\\
+\textbullet $T(a)b or T(b)a$: 2mn flops\\
+\textbullet Convolution could be calculated faster using \textit{fast Fourier transform (FFT)} : $5(m + n) log_2(m + n) flops$\\

@@ -1,20 +1,39 @@
 \section{Linear equations}
 \subsection{Linear and affine functions}
-Superposition condition:$f(\alpha x + \beta y) = \alpha f(x) + \beta f(y)$\\
-Such an f is called Linear\\
-Matrix vector product function: A is mXn matrix such that $f(x)=Ax$ and f is linear $f(\alpha x + \beta y)=A(\alpha x + \beta y)=\alpha f(x) + \beta f(y)$\\
-Converse is true: If $f:R^{n} \mapsto R^{m}$ is linear, then $f(x)=f(x_{1}e_{1}+x_{2}e_{2}+...x_{n}e_{n})$
-\newline $=x_{1}f(e_{1})+x_{2}f(e_{2})+...x_{n}f(e_{n})$
-\newline$=Ax$ with $A = [f(e_{1})+f(e_{2})+...f(e_{n})]$
-\newline Affine Functions:$f:R^{n} \mapsto R^{m}$ is affine if it is a linear function plus a constant i.e $f(x)=Ax+b$ same as $f(\alpha x + \beta y)=\alpha f(x)+\beta f(y)$ holds for all x, y and $\alpha,\beta$ such that $\alpha+\beta=1$ 
-\newline A and B can be calculated as \\
-$A=[f(e_{1})-f(0)\thickspace f(e_{2})-f(0) ... f(e_{n})-f(0)]] ; b= f(0)$\\
-Affine functions sometimes incorrectly called linear functions
+\textbullet Superposition condition:$f(\alpha x + \beta y) = \alpha f(x) + \beta f(y)$\\
+\textbullet Such an f is called Linear\\
+\textbf{Matrix vector product function}:\\
+\textbullet A is $m \times n$ matrix such that $f(x)=Ax$\\
+\textbullet f is linear:  $f(\alpha x + \beta y)=A(\alpha x + \beta y)=\alpha f(x) + \beta f(y)$\\
+\textbullet Converse is true: If $f:R^{n} \mapsto R^{m}$ is linear, then \\
+$f(x)=f(x_{1}e_{1}+x_{2}e_{2}+...x_{n}e_{n})$\\
+$=x_{1}f(e_{1})+x_{2}f(e_{2})+...x_{n}f(e_{n})$
+$=Ax$ with $A = [f(e_{1})+f(e_{2})+...f(e_{n})]$
+\newline \textbf{Affine Functions}: $f:R^{n} \mapsto R^{m}$ is affine if it is a linear function plus a constant i.e $f(x)=Ax+b$ same as $f(\alpha x + \beta y)=\alpha f(x)+\beta f(y)$ holds for all x, y and $\alpha,\beta$ such that $\alpha+\beta=1$ 
+\newline A and b can be calculated as \\
+$A=[f(e_{1})-f(0)\thickspace f(e_{2})-f(0) ... f(e_{n})-f(0)]] ; $\\
+$b= f(0)$\\
+\textbullet Affine functions sometimes incorrectly called linear functions
 \subsection{Linear function models}
 Price elasticity of demand
 $\delta_i^{price}=(p_i^{new}-p_{i})/p_{i}$: fractional changes in prices
 $\delta_i^{dem}=(d_i^{new}-d_{i})/d_{i}$: fractional change in demand
 Price demand elasticity model: $\delta^{dem}=E\delta^{price}$\\
-Taylor series approximation
-Regression model
+\textbf{Taylor series approximation}\\
+\textbullet The (first-order) Taylor approximation of f near (or at) the point z:\\
+\begin{scriptsize}
+$\hat{f}(x)= f(z) + \frac{\partial f}{\partial x_1}(z)(x_1 - z_1) + ... +  \frac{\partial f}{\partial x_n}(z)(x_n - z_n)$
+\end{scriptsize}\\
+\textbullet in compact notation:  \\$\hat{f}(x) = f (z) + Df (z)(x - z)$
 \subsection{Systems of linear equations}
+\textbullet set (or system) of m linear equations in n variables $x_1,.., x_n$: \\
+$A_{11}x_1 + A_{12}x_2 + ... + A_{1n}x_n = b_1$\\
+$A_{21}x_1 + A_{22}x_2 + ... + A_{2n}x_n = b_2$\\
+.\\
+.\\
+$A_{m1}x_1 + A_{m2}x_2 + ... + A_{mn}x_n = b_m$\\
+
+\textbullet \textbf{systems of linear equations classified as}\\
+\thickspace -- under-determined if m < n (A wide)\\
+\thickspace -- square if m = n (A square)\\
+\thickspace -- over-determined if m > n (A tall)\\

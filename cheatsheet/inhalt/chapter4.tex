@@ -2,15 +2,27 @@
 
 \subsection{Clustering}
 \subsection{A clustering Objective}
-$G_{j}= \{ i| c_{i}=j \}$ where $G_{j}$ is set of all indices i for which $c_{i}=j$\\
-Group representatives: We want each rep to be close to the vectors, i.e $||x_{i}-z_{c_{i}}||$ where $x_{i}$ is in group $j=c_{i}$ so $z_{c_{i}}$ is the representative vector associated with data vector $x_{i}$ \\ 
-$J^{clust}=(||x_{1}-z_{c_{1}}||^2 + ...+||x_{N}-z_{c_{N}}||^2)/N$\\
-Partitioning vectors with representatives fixed: $||x_{i}-z_{c_{i}}||=\min\limits_{j=1,....,k} ||x_{i}-z_{j}||$\\
-$J^{clust}=\Big(\min\limits_{j=1,....,k} ||x_{1}-z_{j}||^{2}+....+\min\limits_{j=1,....,k} ||x_{N}-z_{j}||^{2}\Big)/N$\\
-Optimizing group representatives with assignment fixed: $J^{clust}=J_{1}+...+J_{k}$ where $J_{j}=\big(1/N\big)\sum\limits_{i\in G_{j}}||x_{i}-z_{j}||^{2}$\\
-To minimize mean square distance $z_{j}=\big(1/|G_{j}|\big))\sum\limits_{i\in G_{j}}x_{i}$ where $|G_{j}|$ is standard notation for number of elements in set $G_{j}$
+$G_{j} \subset \{ i| c_{i}=j \}$ where $G_{j}$ is set of all indices i for which $c_{i}=j$\\
+\textbullet Group representatives: n-vectors $z_1,..,z_k$
+
+\textbullet Clustering objective is\\
+$J^{clust} = \frac{1}{N} \sum_{i=1}^N\Vert x_i - Z_{c_i}\Vert^2$\\
+\textbullet mean square distance from vectors to associated representative\\
+\textbullet goal: choose clustering $c_i$ and representatives $z_j$
+to minimize $J_clust$
+% Group representatives: We want each rep to be close to the vectors, i.e $||x_{i}-z_{c_{i}}||$ where $x_{i}$ is in group $j=c_{i}$ so $z_{c_{i}}$ is the representative vector associated with data vector $x_{i}$ \\ 
+% $J^{clust}=(||x_{1}-z_{c_{1}}||^2 + ...+||x_{N}-z_{c_{N}}||^2)/N$\\
+% Partitioning vectors with representatives fixed: $||x_{i}-z_{c_{i}}||=\min\limits_{j=1,....,k} ||x_{i}-z_{j}||$\\
+% $J^{clust}=\Big(\min\limits_{j=1,....,k} ||x_{1}-z_{j}||^{2}+....+\min\limits_{j=1,....,k} ||x_{N}-z_{j}||^{2}\Big)/N$\\
+% Optimizing group representatives with assignment fixed: $J^{clust}=J_{1}+...+J_{k}$ where $J_{j}=\big(1/N\big)\sum\limits_{i\in G_{j}}||x_{i}-z_{j}||^{2}$\\
+% To minimize mean square distance $z_{j}=\big(1/|G_{j}|\big))\sum\limits_{i\in G_{j}}x_{i}$ where $|G_{j}|$ is standard notation for number of elements in set $G_{j}$
 \subsection{The k-means algorithm}
-\subsection{Examples}
-\subsection{Applications}
+\rule{\linewidth}{0.4pt}
+\textbf{given} $x_1,..,x_N \in \textbf{R}^n$ and $z_1,...,z_k \in \textbf{R}^n$\\
+\textbf{repeat}\\
+-- \textit{Update partition}: assign i to $G_j$, $j = argmin_{j'} \Vert x_i - z_{j'} \Vert_2$\\
+-- \textit{Update centroids}: $Z_j = \frac{1}{|G_j|}\sum_{i \in G_j}x_i$\\
+\textbf{until} $z1,...,zk$ stop changing\\
+\rule{\linewidth}{0.4pt}
 
 
