@@ -37,6 +37,6 @@ $(a + b)^T c = a^T c + b^T c.$
 $a^T b = a_1^T b_1 + ... + a_k^T b_k$
 
 \subsection{Complexity of vector computations}
-\textit{Space}:  8n bytes\\
-\textit{Complexity of vector operations}: $x^Ty=2n-1$ flops ($n$ scalar multiplications and $n-1$ scalar additions)\\
-\textit{Complexity of sparse vector operations}: If x is sparse, then computing $ax$ requires \textbf{nnz}(x) flops, If x and y are sparse, computing x + y requires no more than min{\textbf{nnz}(x), \textbf{nnz}(y)}. computing $x_T y$ requires no more than 2 min{\textbf{nnz}(x), \textbf{nnz}(y)} flops
+\textbullet \textit{Space}:  8n bytes\\
+\textbullet \textit{Complexity of vector operations}: $x^Ty=2n-1$ flops ($n$ scalar multiplications and $n-1$ scalar additions)\\
+\textbullet \textit{Complexity of sparse vector operations}: If x is sparse, then computing $ax$ requires \textbf{nnz}(x) flops, If x and y are sparse, computing x + y requires no more than min{\textbf{nnz}(x), \textbf{nnz}(y)}. computing $x_T y$ requires no more than 2 min{\textbf{nnz}(x), \textbf{nnz}(y)} flops

@@ -2,9 +2,9 @@
 \subsection{Linear dynamical systems}
 $x_{t+1} = A_tx_t$ , t = 1,2,. . .\\
 \textbullet $A_t$ are n × n dynamics matrices
-\textbullet $(A_t)_{ij}(x_t)_j
-is contribution to (x_{t+1})_i
-from (x_t)_j$\\
+\textbullet $(A_t)_{ij}(x_t)_j$
+is contribution to $(x_{t+1})_i$
+from $(x_t)_j$\\
 \textbullet system is called time-invariant if $A_t = A$ doesn't depend on time\\
 \textbullet can simulate evolution of xt using recursion $x_{t+1} = A_tx$\\
 \textbullet linear dynamical system with input\\
@@ -18,7 +18,56 @@ $x_{t+1} = A_1x_t + ... + A_Kx_{t-K+1}$, t = K,K + 1,...\\
 \thickspace – also known as auto-regresssive model\\
 \thickspace – for K = 1, this is the standard linear dynamical system $x_{t+1} = Ax_t$\\
 \subsection{Population dynamics}
-
+\textbullet $x_t \in R^{100}$ gives population distribution in year t = 1,...,T\\
+\textbullet $(x_t)^i$ is the number of people with age i - 1 in year t (say, on January 1)\\
+\textbullet birth rate $b \in R^{100}$, death (or mortality) rate $d \in R^{100}$\\
+\textbullet $b_i$ is the number of births per person with age i - 1\\
+\textbullet $d_i$ is the portion of those aged i - 1 who will die this year (we’ll take $d_{100} = 1$)
+\textbullet let’s find next year’s population distribution $x_t+1$ (ignoring immigration)\\
+\textbullet number of 0-year-olds next year is total births this year:\\
+$(x_{t+1})_1 = b^Tx_t$\\
+\textbullet number of i-year-olds next year is number of (i - 1)-year-olds this year, minus those who die:
+$(x_{t+1})_{i+1} = (1 - d_i)(x_t)_i$ , i = 1,..,99\\
+\textbullet $x_{t+1} = Ax_t$ , where\\
+$A =
+\begin{bmatrix}
+    b_1 & b_2 &...& b_{99} & {b_{100}} \\
+    1-d_1 & 0 &...& 0 & 0\\
+    0 & 1-d_2 &...& 0 & 0\\
+    . & . &...& . &.\\
+    . & . &...& . &.\\
+    0 & 0 &...& 1-d_{99} & 0
+\end{bmatrix}
+$
 \subsection{Epidemic dynamics}
-\subsection{Motion of a mass}
-\subsection{Supply chain dynamics}
+\textbf{SIR Model}\\
+\textbullet 4-vector $x_t$ gives proportion of population in 4 infection states\\
+-- \textit{Susceptible}: can acquire the disease the next day\\
+-- \textit{Infected}: have the disease
+-- \textit{Recovered}: had the disease, recovered, now immune\\
+-- \textit{Deceased}: had the disease, and unfortunately died\\
+\textbullet sometimes called SIR model\\
+\textbullet e.g., $x_t = (0.75,0.10,0.10,0.05)$
+\textbf{over each day},\\
+\textbullet among susceptible population,\\
+-- 5\% acquires the disease\\
+-- 95\% remain susceptible
+\textbullet among infected population,\\
+-- 1\% dies\\
+-- 10\% recovers with immunity\\
+-- 4\% recover without immunity (i.e., become susceptible)\\
+-- 85\% remain infected\\
+\textbullet 100\% of immune and dead people remain in their state\\
+\textbullet epidemic dynamics as linear dynamical system\\
+$
+x_{t+1} =
+\begin{bmatrix}
+    0.95 &  0.04 &  0 & 0 \\
+    0.05 & 0.85 & 0 & 0\\
+    0 & 0.10 & 1 & 0\\
+    . & . &...& . &\\
+    . & . &...& . &\\
+    0 & 0.01 & 0 & 1
+\end{bmatrix}x_t
+$\\
+

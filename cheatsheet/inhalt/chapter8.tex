@@ -37,3 +37,31 @@ $A_{m1}x_1 + A_{m2}x_2 + ... + A_{mn}x_n = b_m$\\
 \thickspace -- under-determined if m < n (A wide)\\
 \thickspace -- square if m = n (A square)\\
 \thickspace -- over-determined if m > n (A tall)\\
+
+\textbf{Balancing equation example}\\
+\textbullet consider reaction with m types of atoms, p reactants, q products\\
+\textbullet $m \times p$ reactant matrix R is defined by\\
+$R_{ij}$ = number of atoms of type i in reactant $R_j$\\
+for i = 1,..,m and j = 1,..,p\\
+\textbullet with $a = (a_1,..,a_p)$ (vector of reactant coefficients)\\
+$Ra$ = (vector of) total numbers of atoms of each type in reactants\\
+\textbullet define product $m \times q$ matrix P in similar way\\
+\textbullet m-vector $Pb$ is total numbers of atoms of each type in products\\
+\textbullet conservation of mass is $Ra = Pb$
+\textbullet  conservation of mass is\\
+$[R - P][a\thickspace b]^T = 0$\\
+\textbullet simple solution is $a = b = 0$\\
+\textbullet to find a nonzero solution, set any coefficient (say, $a_1$) to be 1\\
+\textbullet balancing chemical equations can be expressed as solving a set of m + 1 linear equations in p + q variables \\
+$
+\begin{bmatrix}
+    R & -P \\
+    e_1^T & 0
+    
+\end{bmatrix} 
+\begin{bmatrix}
+    a \\
+    b
+\end{bmatrix}=e_{m+1}
+$\\
+(we ignore here that $a_i$ and $b_i$ should be nonnegative integers)
