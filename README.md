@@ -1,4 +1,4 @@
-# COT5615
+# COT5615 Math for Intelligent Systems Fall 2019
 ### Unit 1: Introduction
 Motivating examples. Using Julia, Jupyter, Markdown and basic latex formulas. No prior reading is needed.
 [Intro to Julia](https://www.youtube.com/watch?v=8h8rQyEpiZA)
@@ -35,3 +35,7 @@ From [3B1B]:
 
 ### Install Julia
 [Install Julia](https://www.youtube.com/watch?v=oyx8M1yoboY)
+
+
+## Textbook
+[S. Boyd and L. Vandenberghe, Introduction to Applied Linear Algebra -- Vectors, Matrices, and Least Squares](https://web.stanford.edu/~boyd/vmls/)
