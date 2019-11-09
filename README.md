@@ -33,6 +33,17 @@ From [3B1B]:
 
 [The determinant | Essence of linear algebra, chapter 6](https://www.youtube.com/watch?v=Ip3X9LOh2dk) 
 
+## Unit 5: Matrices and Vector Spaces
+From [VMLS]: 11.1 Left and right inverses, 11.2 inverse, 11.3 Solving linear equations, 11.5 Pseudo-inverse.
+
+[Inverse matrices, column space and null space | Essence of linear algebra, chapter 7](https://www.youtube.com/watch?v=uQhTuRlWMxw) 
+
+[Nonsquare matrices as transformations between dimensions | Essence of linear algebra, chapter 8](https://www.youtube.com/watch?v=v8VSDg_WQlA) 
+
+[Least squares approximation | Linear Algebra | Khan Academy](https://www.youtube.com/watch?v=MC7l96tW8V8) 
+
+[Abstract vector spaces | Essence of linear algebra, chapter 15](https://www.youtube.com/watch?v=TgKwz5Ikpc8)
+
 ### Install Julia
 [Install Julia](https://www.youtube.com/watch?v=oyx8M1yoboY)
 
